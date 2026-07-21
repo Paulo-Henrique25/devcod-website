@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevCod - A Escola de Tecnologia & Engenharia de Software</title>
+  <meta name="description" content="Transforme-se de iniciante a desenvolvedor profissional com a DevCod. Projetos práticos, mentoria com IA, preparação real para o mercado e atualizações vitalícias.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <script type="module" crossorigin src="/assets/index-CRr-ImD9.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CY12mGab.css">
+</head>
+<body>
+
+  <!-- ELEMENTOS DE BRILHO AO FUNDO -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <i data-lucide="code-2"></i>
+        </div>
+        <span class="logo-text">DEV<span class="highlight">COD</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#programs">Programas de Formação</a></li>
+        <li><a href="#college">Aceleração & Pós</a></li>
+        <li><a href="#companies">Empresas Parceiras</a></li>
+        <li><a href="#instructors">Instrutores</a></li>
+        <li><a href="#testimonials">Depoimentos</a></li>
+        <li><a href="#market">Mercado & Salários</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn btn-transparent" id="openStudentArea">
+          <i data-lucide="user"></i> Área do Aluno
+        </button>
+        <button class="btn btn-primary" id="openEnrollModal">
+          Quero ser aluno <i data-lucide="arrow-right"></i>
+        </button>
+      </div>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Alternar menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <canvas id="particleCanvas"></canvas>
+      <div class="hero-bg-overlay"></div>
+      
+      <div class="hero-container">
+        <div class="badge hero-badge">
+          <span class="badge-dot"></span>
+          <i data-lucide="sparkles"></i> A Nova Geração da Educação em Tecnologia
+        </div>
+
+        <h1 class="hero-headline">
+          A formação que transforma iniciantes em <span class="gradient-text">desenvolvedores profissionais.</span>
+        </h1>
+
+        <div class="hero-cta-group">
+          <button class="btn btn-primary btn-xl" onclick="document.getElementById('openEnrollModal').click()">
+            Começar agora <i data-lucide="zap"></i>
+          </button>
+          <a href="#programs" class="btn btn-secondary btn-xl">
+            Explorar programas <i data-lucide="compass"></i>
+          </a>
+        </div>
+
+        <!-- CARDS FLUTUANTES HERO -->
+        <div class="hero-floating-cards">
+          <div class="hero-float-card card-left">
+            <div class="float-icon blue"><i data-lucide="trending-up"></i></div>
+            <div>
+              <div class="float-title">98% de Contratação</div>
+              <div class="float-sub">Em até 90 dias após a formação</div>
+            </div>
+          </div>
+          <div class="hero-float-card card-right">
+            <div class="float-icon purple"><i data-lucide="bot"></i></div>
+            <div>
+              <div class="float-title">Agente de IA Integrado</div>
+              <div class="float-sub">Code review & tutor 24 horas por dia</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROVA SOCIAL -->
+    <section class="social-proof-section">
+      <div class="section-container">
+        <div class="proof-header">
+          <div class="avatar-stack">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Aluno">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Aluno">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Aluno">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Aluno">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Aluno">
+          </div>
+          <p class="proof-headline-text">
+            Mais de <strong>30.000 alunos</strong> já passaram pela DevCod para conquistar carreiras de alto valor em tecnologia.
+          </p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3 class="stat-number gradient-text" data-target="30000">30.000+</h3>
+            <p class="stat-label">Alunos Formados</p>
+          </div>
+          <div class="stat-card">
+            <h3 class="stat-number gradient-text-cyan" data-target="98">98%</h3>
+            <p class="stat-label">Taxa de Satisfação</p>
+          </div>
+          <div class="stat-card">
+            <h3 class="stat-number gradient-text-purple" data-target="500">500+</h3>
+            <p class="stat-label">Empresas Contratantes</p>
+          </div>
+          <div class="stat-card">
+            <h3 class="stat-number gradient-text" data-target="12">12+ Anos</h3>
+            <p class="stat-label">Formando Desenvolvedores</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARROSSEL INFINITO DE EMPRESAS -->
+    <section class="companies-section" id="companies">
+      <div class="section-subtitle">NOSSOS ALUNOS TRABALHAM NAS MAIORES GIGANTES DE TECNOLOGIA</div>
+      <div class="ticker-wrap">
+        <div class="ticker-move">
+          <div class="company-logo"><i data-lucide="globe"></i> Google</div>
+          <div class="company-logo"><i data-lucide="cpu"></i> Microsoft</div>
+          <div class="company-logo"><i data-lucide="shopping-bag"></i> Amazon</div>
+          <div class="company-logo"><i data-lucide="credit-card"></i> Nubank</div>
+          <div class="company-logo"><i data-lucide="utensils"></i> iFood</div>
+          <div class="company-logo"><i data-lucide="box"></i> Mercado Livre</div>
+          <div class="company-logo"><i data-lucide="server"></i> IBM</div>
+          <div class="company-logo"><i data-lucide="database"></i> Oracle</div>
+          <div class="company-logo"><i data-lucide="landmark"></i> Santander</div>
+          <div class="company-logo"><i data-lucide="layers"></i> TOTVS</div>
+          <div class="company-logo"><i data-lucide="tv"></i> Globo</div>
+          <div class="company-logo"><i data-lucide="code"></i> CI&T</div>
+          <div class="company-logo"><i data-lucide="binary"></i> Stefanini</div>
+          <div class="company-logo"><i data-lucide="compass"></i> Compass UOL</div>
+          <div class="company-logo"><i data-lucide="zap"></i> Accenture</div>
+          <div class="company-logo"><i data-lucide="shield"></i> Capgemini</div>
+          <!-- Duplicado para efeito infinito -->
+          <div class="company-logo"><i data-lucide="globe"></i> Google</div>
+          <div class="company-logo"><i data-lucide="cpu"></i> Microsoft</div>
+          <div class="company-logo"><i data-lucide="shopping-bag"></i> Amazon</div>
+          <div class="company-logo"><i data-lucide="credit-card"></i> Nubank</div>
+          <div class="company-logo"><i data-lucide="utensils"></i> iFood</div>
+          <div class="company-logo"><i data-lucide="box"></i> Mercado Livre</div>
+          <div class="company-logo"><i data-lucide="server"></i> IBM</div>
+          <div class="company-logo"><i data-lucide="database"></i> Oracle</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAMAS DE TREINAMENTO -->
+    <section class="programs-section" id="programs">
+      <div class="section-container">
+        <div class="section-header center">
+          <div class="badge"><i data-lucide="book-open"></i> Formações Full-Stack & Especializadas</div>
+          <h2 class="section-title">Domine Todas as Camadas da <span class="gradient-text">Tecnologia Moderna</span></h2>
+          <p class="section-desc">Da sintaxe básica a sistemas distribuídos de alta escala, inteligência artificial e engenharia em nuvem.</p>
+          
+          <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">Todos os Programas</button>
+            <button class="filter-btn" data-filter="frontend">Frontend & Mobile</button>
+            <button class="filter-btn" data-filter="backend">Backend & Arquitetura</button>
+            <button class="filter-btn" data-filter="devops">DevOps & Cloud</button>
+            <button class="filter-btn" data-filter="ai">IA & Automação</button>
+          </div>
+        </div>
+
+        <div class="programs-grid" id="programsGrid">
+          <!-- Cards gerados via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ACELERAÇÃO / PÓS-GRADUAÇÃO -->
+    <section class="college-section" id="college">
+      <div class="section-container">
+        <div class="college-card glass-panel">
+          <div class="college-content">
+            <div class="badge purple-badge"><i data-lucide="award"></i> Aceleração DevCod</div>
+            <h2>Aceleração em <span class="gradient-text-purple">Engenharia de Software</span></h2>
+            <p>Combine a intensidade prática do bootcamp com certificação formal de especialização. Desenvolvido para engenheiros ambiciosos que buscam vagas remotas internacionais e posições de liderança técnica.</p>
+            
+            <ul class="college-features">
+              <li><i data-lucide="check-circle-2"></i> Certificação Dupla & Portfólio Verificado no GitHub</li>
+              <li><i data-lucide="check-circle-2"></i> Mentoria Direta com Engenheiros do Vale do Silício</li>
+              <li><i data-lucide="check-circle-2"></i> Inglês Técnico & Preparação para Salários Globais</li>
+            </ul>
+
+            <button class="btn btn-purple btn-lg" onclick="openCourseModal('Engenharia de Software DevCod', 'Aceleração Sênior', '120 Horas', 'Avançado', 'Programa completo de aceleração com arquitetura de alta concorrência e mentoria internacional.')">
+              Conhecer Programa de Aceleração <i data-lucide="arrow-right"></i>
+            </button>
+          </div>
+          <div class="college-visual">
+            <div class="visual-badge"><i data-lucide="terminal"></i> Laboratório Interativo</div>
+            <pre class="code-preview"><code><span class="token-keyword">class</span> <span class="token-class">DevCodGraduate</span> {
+  <span class="token-property">habilidades</span> = [<span class="token-string">'TypeScript'</span>, <span class="token-string">'Next.js'</span>, <span class="token-string">'NestJS'</span>, <span class="token-string">'AWS'</span>, <span class="token-string">'Agentes de IA'</span>];
+  <span class="token-property">status</span> = <span class="token-string">'Pronto Para Posições Sênior'</span>;
+
+  <span class="token-method">implantarEmProducao</span>() {
+    <span class="token-keyword">return</span> <span class="token-string">'Carreira Transformada 🚀'</span>;
+  }
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECNOLOGIAS EM DESTAQUE -->
+    <section class="tech-section">
+      <div class="section-container">
+        <div class="section-header center">
+          <div class="badge cyan-badge"><i data-lucide="layers"></i> Stack Tecnológica Moderna</div>
+          <h2 class="section-title">Aprenda as Ferramentas Mais Exigidas pelo <span class="gradient-text-cyan">Mercado de Trabalho</span></h2>
+          <p class="section-desc">Sem conteúdos desatualizados. Domine frameworks de nível de produção usados pelas maiores equipes de engenharia.</p>
+        </div>
+
+        <div class="tech-grid" id="techGrid">
+          <!-- 24+ tecnologias geradas via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- RECURSOS DA PLATAFORMA -->
+    <section class="platform-section" id="platform">
+      <div class="section-container">
+        <div class="section-header center">
+          <div class="badge"><i data-lucide="layout-grid"></i> Plataforma de Nível Mundial</div>
+          <h2 class="section-title">Tudo o que Você Precisa para um <span class="gradient-text">Aprendizado Rápido e Eficiente</span></h2>
+          <p class="section-desc">Desenvolvida do zero por desenvolvedores de software, para desenvolvedores de software.</p>
+        </div>
+
+        <div class="platform-grid">
+          <div class="platform-card glass-panel">
+            <div class="p-icon blue"><i data-lucide="monitor"></i></div>
+            <h3>Plataforma Moderna</h3>
+            <p>Interface fluida em modo escuro com IDE integrada, anotações e controle de velocidade.</p>
+          </div>
+          <div class="platform-card glass-panel">
+            <div class="p-icon purple"><i data-lucide="git-fork"></i></div>
+            <h3>Trilhas Organizadas</h3>
+            <p>Roadmap claro passo a passo desde a primeira variável até arquiteturas de microserviços.</p>
+          </div>
+          <div class="platform-card glass-panel">
+            <div class="p-icon cyan"><i data-lucide="user-check"></i></div>
+            <h3>Área do Aluno</h3>
+            <p>Métricas de aprendizado personalizadas, histórico de código, tarefas e calendário de estudos.</p>
+          </div>
+          <div class="platform-card glass-panel">
+            <div class="p-icon blue"><i data-lucide="message-square"></i></div>
+            <h3>Comunidade Ativa</h3>
+            <p>Colabore com milhares de devs, monte equipes para hackathons e troque experiências.</p>
+          </div>
+          <div class="platform-card glass-panel">
+            <div class="p-icon purple"><i data-lucide="bot"></i></div>
+            <h3>IA Integrada</h3>
+            <p>Receba correções de código instantâneas, ajuda para depuração linha por linha e explicações de erros.</p>
+          </div>
+          <div class="platform-card glass-panel">
+            <div class="p-icon cyan"><i data-lucide="users"></i></div>
+            <h3>Instrutores Sênior</h3>
+            <p>Orientação direta de engenheiros especialistas que atuam no Uber, Nubank, Meta e AWS.</p>
+          </div>
+          <div class="platform-card glass-panel">
+            <div class="p-icon blue"><i data-lucide="code-2"></i></div>
+            <h3>Revisão de Projetos</h3>
+            <p>Engenheiros sêniores revisam seus Pull Requests no GitHub linha por linha antes de você publicar.</p>
+          </div>
+          <div class="platform-card glass-panel">
+            <div class="p-icon purple"><i data-lucide="shield-check"></i></div>
+            <h3>Certificados Verificáveis</h3>
+            <p>Compartilhe credenciais criptográficas diretamente no LinkedIn e no seu currículo.</p>
+          </div>
+          <div class="platform-card glass-panel">
+            <div class="p-icon cyan"><i data-lucide="refresh-cw"></i></div>
+            <h3>Atualizações Vitalícias</h3>
+            <p>Nunca fique desatualizado. Os materiais são continuamente atualizados conforme a tecnologia evolui.</p>
+          </div>
+          <div class="platform-card glass-panel">
+            <div class="p-icon blue"><i data-lucide="smartphone"></i></div>
+            <h3>Aplicativo Mobile</h3>
+            <p>Assista às aulas, responda questionários e acompanhe seu progresso no iOS e Android.</p>
+          </div>
+          <div class="platform-card glass-panel">
+            <div class="p-icon purple"><i data-lucide="trophy"></i></div>
+            <h3>Dashboard & Ranking</h3>
+            <p>Mantenha a motivação com conquistas gamificadas, ofensivas de estudo e recompensas.</p>
+          </div>
+          <div class="platform-card glass-panel">
+            <div class="p-icon cyan"><i data-lucide="bell"></i></div>
+            <h3>Notificações Inteligentes</h3>
+            <p>Lembretes de estudo personalizados, alertas de mentorias ao vivo e oportunidades de emprego.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUPORTE E MENTORIA -->
+    <section class="support-section">
+      <div class="section-container">
+        <div class="support-wrapper glass-panel">
+          <div class="support-text">
+            <div class="badge cyan-badge"><i data-lucide="heart-handshake"></i> Suporte Incomparável ao Aluno</div>
+            <h2 class="section-title">Você <span class="gradient-text-cyan">Nunca Estará Sozinho</span> na Sua Jornada.</h2>
+            <p>Aprender a programar pode ser desafiador, mas com o ecossistema de suporte contínuo da DevCod, você superará qualquer bug rapidamente.</p>
+
+            <div class="support-pillars">
+              <div class="pillar-item">
+                <i data-lucide="video"></i>
+                <div>
+                  <h4>Mentoria ao Vivo</h4>
+                  <p>Salas de vídeo diárias ao vivo para tirar dúvidas de código com instrutores sêniores.</p>
+                </div>
+              </div>
+              <div class="pillar-item">
+                <i data-lucide="help-circle"></i>
+                <div>
+                  <h4>Sistema de Dúvidas</h4>
+                  <p>Envie seus erros de código e receba respostas detalhadas em poucos minutos.</p>
+                </div>
+              </div>
+              <div class="pillar-item">
+                <i data-lucide="git-pull-request"></i>
+                <div>
+                  <h4>Revisão Humana de Código</h4>
+                  <p>Feedback detalhado sobre boas práticas, código limpo e arquitetura.</p>
+                </div>
+              </div>
+              <div class="pillar-item">
+                <i data-lucide="sparkles"></i>
+                <div>
+                  <h4>Networking & Eventos</h4>
+                  <p>Hackathons privados, palestras técnicas e ponte direta com recrutadores.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="support-card-group">
+            <div class="support-stat-box">
+              <div class="stat-big"><i data-lucide="clock"></i> &lt; 15 min</div>
+              <p>Tempo médio de resposta para dúvidas de código</p>
+            </div>
+            <div class="support-stat-box highlight">
+              <div class="stat-big"><i data-lucide="check-check"></i> 100%</div>
+              <p>Garantia de revisão e aprovação dos seus projetos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLUB AGENTS (IA E AUTOMAÇÕES) -->
+    <section class="club-agents-section" id="club-agents">
+      <div class="club-bg-img" style="background-image: url('/assets/ai_bg-osK8dKVS.jpg');"></div>
+      <div class="section-container">
+        <div class="club-agents-wrapper glass-panel">
+          <div class="club-header">
+            <div class="badge purple-badge"><i data-lucide="cpu"></i> Zona Exclusiva de Inteligência Artificial</div>
+            <h2 class="section-title">DevCod <span class="gradient-text-purple">Club Agents</span></h2>
+            <p>Dê um passo no futuro. Aprenda a construir, implantar e escalar Agentes de IA Autônomos, Fluxos de Automação e Chatbots Empresariais.</p>
+          </div>
+
+          <div class="agents-grid">
+            <div class="agent-card">
+              <div class="agent-icon"><i data-lucide="bot"></i></div>
+              <h3>Agentes Inteligentes de IA</h3>
+              <p>Crie agentes autônomos utilizando LangChain, AutoGen e Chamadas de Funções da OpenAI.</p>
+            </div>
+            <div class="agent-card">
+              <div class="agent-icon"><i data-lucide="workflow"></i></div>
+              <h3>Fluxos Automatizados</h3>
+              <p>Conecte processos de negócios usando n8n, Make.com, Zapier e scripts em Python.</p>
+            </div>
+            <div class="agent-card">
+              <div class="agent-icon"><i data-lucide="messages-square"></i></div>
+              <h3>Chatbots Inteligentes</h3>
+              <p>Implante bots de RAG com busca vetorial sobre bancos de dados privados.</p>
+            </div>
+            <div class="agent-card">
+              <div class="agent-icon"><i data-lucide="combine"></i></div>
+              <h3>Integrações Multi-LLM</h3>
+              <p>Domine as APIs da OpenAI GPT-4o, Anthropic Claude 3.5 Sonnet e Google Gemini Pro.</p>
+            </div>
+          </div>
+
+          <div class="integrations-bar">
+            <span>Tecnologias Integradas:</span>
+            <div class="tech-pills">
+              <span class="pill"><i data-lucide="sparkles"></i> OpenAI</span>
+              <span class="pill"><i data-lucide="brain-circuit"></i> Claude AI</span>
+              <span class="pill"><i data-lucide="zap"></i> Gemini</span>
+              <span class="pill"><i data-lucide="git-merge"></i> n8n</span>
+              <span class="pill"><i data-lucide="repeat"></i> Make.com</span>
+              <span class="pill"><i data-lucide="plug"></i> Zapier</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLAYGROUND INTERATIVO DE CÓDIGO -->
+    <section class="playground-section" id="playground">
+      <div class="section-container">
+        <div class="section-header center">
+          <div class="badge cyan-badge"><i data-lucide="play-circle"></i> Laboratório Interativo de Tecnologia</div>
+          <h2 class="section-title">Experimente o <span class="gradient-text-cyan">Playground Visual DevCod</span></h2>
+          <p class="section-desc">Mesmo que você nunca tenha programado, escolha um exemplo abaixo, clique em "Executar" e veja a mágica acontecer em tempo real no palco visual!</p>
+        </div>
+
+        <!-- PRESETS INTERATIVOS (BOTOES 1-CLIQUE) -->
+        <div class="playground-presets">
+          <button class="preset-btn active" data-preset="ai-bot">
+            <i data-lucide="bot"></i> 1. Criar Chatbot de IA
+          </button>
+          <button class="preset-btn" data-preset="neon-generator">
+            <i data-lucide="palette"></i> 2. Gerador Neon 3D
+          </button>
+          <button class="preset-btn" data-preset="ecommerce-sales">
+            <i data-lucide="shopping-bag"></i> 3. Robô de Vendas
+          </button>
+          <button class="preset-btn" data-preset="mini-game">
+            <i data-lucide="gamepad-2"></i> 4. Mini-Jogo 2D
+          </button>
+        </div>
+
+        <div class="playground-box glass-panel">
+          <div class="playground-topbar">
+            <div class="window-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            
+            <div class="tab-group">
+              <button class="tab-btn active" data-tab="js"><i data-lucide="file-code"></i> main.js</button>
+              <button class="tab-btn" data-tab="html"><i data-lucide="code-2"></i> index.html</button>
+              <button class="tab-btn" data-tab="css"><i data-lucide="palette"></i> style.css</button>
+            </div>
+
+            <div class="playground-actions">
+              <button class="btn btn-primary btn-sm pulse-btn" id="runCodeBtn">
+                <i data-lucide="play"></i> Executar Código Vivo
+              </button>
+            </div>
+          </div>
+
+          <div class="playground-body">
+            <!-- PAINEL ESQUERDO: EDITOR DE CÓDIGO + CONTROLES VISUAIS -->
+            <div class="editor-pane">
+              <div class="pane-header">
+                <span><i data-lucide="terminal"></i> Editor de Código DevCod</span>
+                <span class="editor-lang-tag">JavaScript / ES6+</span>
+              </div>
+              <textarea id="codeEditor" spellcheck="false"></textarea>
+              
+              <!-- PAINEL DE CONTROLES SEM CÓDIGO (SLIDERS INTERATIVOS) -->
+              <div class="visual-controls-bar">
+                <div class="control-item">
+                  <label for="speedSlider"><i data-lucide="zap"></i> Velocidade:</label>
+                  <input type="range" id="speedSlider" min="1" max="5" value="3">
+                </div>
+                <div class="control-item">
+                  <label for="colorPicker"><i data-lucide="sparkles"></i> Tema Neon:</label>
+                  <select id="colorPicker">
+                    <option value="cyan">Azul Ciano (#00f0ff)</option>
+                    <option value="purple">Roxo Elétrico (#9d4edd)</option>
+                    <option value="green">Verde Matrix (#00ff88)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <!-- PAINEL DIREITO: PALCO VISUAL AO VIVO + CONSOLE + EXPLICAÇÃO DA IA -->
+            <div class="preview-pane">
+              <div class="pane-header">
+                <span><i data-lucide="eye"></i> Palco Visual (Resultado ao Vivo)</span>
+                <span class="live-status-dot"><span class="dot-green"></span> Ao Vivo</span>
+              </div>
+              
+              <!-- PALCO VISUAL ONDE O RESULTADO É RENDERIZADO VISUALMENTE -->
+              <div class="visual-stage-box" id="visualStage">
+                <!-- Conteúdo visual interativo gerado em tempo real -->
+              </div>
+
+              <!-- TERMINAL CONSOLE LOG -->
+              <div class="console-box">
+                <div class="console-header">
+                  <span><i data-lucide="terminal-square"></i> Logs do Sistema</span>
+                  <button class="btn-text" id="clearConsole">Limpar</button>
+                </div>
+                <div class="console-output" id="consoleOutput">
+                  <div class="console-line info">&gt; Sistema DevCod v5.0 Pronto. Pressione "Executar Código Vivo"!</div>
+                </div>
+              </div>
+
+              <!-- EXPLICAÇÃO DIDÁTICA DO TUTOR DE IA PARA LEIGOS -->
+              <div class="ai-tutor-box">
+                <div class="ai-tutor-header">
+                  <i data-lucide="bot"></i> <span>Tutor de IA DevCod (Explicação Passo a Passo)</span>
+                </div>
+                <div class="ai-tutor-message" id="aiTutorMsg">
+                  Escolha um dos exemplos acima e clique em "Executar Código Vivo" para ver a mágica acontecer!
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS DE PORTFÓLIO -->
+    <section class="projects-section" id="projects">
+      <div class="section-container">
+        <div class="section-header center">
+          <div class="badge cyan-badge"><i data-lucide="folder-git-2"></i> Portfólio Real</div>
+          <h2 class="section-title">Construa <span class="gradient-text-cyan">Dezenas de Projetos Reais</span></h2>
+          <p class="section-desc">Você não fará apenas exercícios básicos. Desenvolverá softwares full-stack de nível empresarial prontos para o mercado.</p>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Cards de projetos populados dinamicamente via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- MURAL DE SUCESSO / WALL OF FAME -->
+    <section class="wall-of-fame-section" id="wall-of-fame">
+      <div class="section-container">
+        <div class="section-header center">
+          <div class="badge purple-badge"><i data-lucide="trophy"></i> Mural de Sucesso dos Alunos</div>
+          <h2 class="section-title">De Iniciantes a <span class="gradient-text-purple">Engenheiros de Alto Rendimento</span></h2>
+          <p class="section-desc">Veja as histórias reais de transformação de carreira dos nossos graduados.</p>
+        </div>
+
+        <div class="fame-grid">
+          <div class="fame-card glass-panel">
+            <div class="fame-user">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Lucas Silva">
+              <div>
+                <h4>Lucas Silva</h4>
+                <p class="fame-role">Engenheiro Full-Stack no <strong>Nubank</strong></p>
+              </div>
+            </div>
+            <div class="fame-stats">
+              <div class="f-stat"><span class="f-lbl">Salário:</span> <strong>R$ 11.500/mês</strong></div>
+              <div class="f-stat"><span class="f-lbl">Tempo até Contratação:</span> <strong>42 Dias</strong></div>
+            </div>
+            <p class="fame-quote">"A DevCod mudou toda a minha vida financeira. Saí do zero conhecimento técnico e conquistei uma vaga remota pleno em menos de 6 meses."</p>
+          </div>
+
+          <div class="fame-card glass-panel">
+            <div class="fame-user">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Matheus Oliveira">
+              <div>
+                <h4>Matheus Oliveira</h4>
+                <p class="fame-role">Desenvolvedor Backend no <strong>Mercado Livre</strong></p>
+              </div>
+            </div>
+            <div class="fame-stats">
+              <div class="f-stat"><span class="f-lbl">Salário:</span> <strong>R$ 9.800/mês</strong></div>
+              <div class="f-stat"><span class="f-lbl">Tempo até Contratação:</span> <strong>35 Dias</strong></div>
+            </div>
+            <p class="fame-quote">"As revisões 1 a 1 de código e o módulo de microserviços me deram a segurança necessária para passar em qualquer entrevista técnica pesada."</p>
+          </div>
+
+          <div class="fame-card glass-panel">
+            <div class="fame-user">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Camila Santos">
+              <div>
+                <h4>Camila Santos</h4>
+                <p class="fame-role">Engenheira Frontend no <strong>iFood</strong></p>
+              </div>
+            </div>
+            <div class="fame-stats">
+              <div class="f-stat"><span class="f-lbl">Salário:</span> <strong>R$ 10.200/mês</strong></div>
+              <div class="f-stat"><span class="f-lbl">Tempo até Contratação:</span> <strong>50 Dias</strong></div>
+            </div>
+            <p class="fame-quote">"A comunidade da DevCod e o suporte de mentoria foram fundamentais. Sempre que eu tinha um travamento no código, a equipe ajudava em tempo real."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTRUTORES & AULÕES BÔNUS -->
+    <section class="instructors-section" id="instructors">
+      <div class="section-container">
+        <div class="section-header center">
+          <div class="badge"><i data-lucide="award"></i> Corpo Docente de Nível Mundial</div>
+          <h2 class="section-title">Aprenda com Quem <span class="gradient-text">Vive e Respira Tecnologia</span></h2>
+          <p class="section-desc">Nossos instrutores são Staff Engineers e Tech Leads ativos nas maiores empresas globais.</p>
+        </div>
+
+        <div class="instructors-grid">
+          <div class="instructor-card glass-panel">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80" alt="Instrutor" class="inst-img">
+            <div class="inst-details">
+              <h3>Alexandre Costa</h3>
+              <p class="inst-spec">Líder Full-Stack & Arquiteto em Nuvem</p>
+              <div class="inst-company"><i data-lucide="building"></i> Ex-Google / Especialista AWS</div>
+              <p class="inst-bio">14+ anos desenvolvendo sistemas escaláveis com dezenas de milhões de acessos diários.</p>
+              <div class="inst-socials">
+                <a href="#" aria-label="GitHub"><i data-lucide="code-2"></i></a>
+                <a href="#" aria-label="LinkedIn"><i data-lucide="globe"></i></a>
+                <a href="#" aria-label="Twitter"><i data-lucide="share-2"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="instructor-card glass-panel">
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=300&q=80" alt="Instrutor" class="inst-img">
+            <div class="inst-details">
+              <h3>Beatriz Mendes</h3>
+              <p class="inst-spec">Líder de Engenharia em IA & Dados</p>
+              <div class="inst-company"><i data-lucide="building"></i> Especialista IA & Ex-Meta</div>
+              <p class="inst-bio">Pioneira em arquitetura de Agentes Autônomos, busca vetorial RAG e implantação de LLMs.</p>
+              <div class="inst-socials">
+                <a href="#" aria-label="GitHub"><i data-lucide="code-2"></i></a>
+                <a href="#" aria-label="LinkedIn"><i data-lucide="globe"></i></a>
+                <a href="#" aria-label="Twitter"><i data-lucide="share-2"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="instructor-card glass-panel">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80" alt="Instrutor" class="inst-img">
+            <div class="inst-details">
+              <h3>Rafael Torres</h3>
+              <p class="inst-spec">Principal de DevOps & Segurança</p>
+              <div class="inst-company"><i data-lucide="building"></i> Arquiteto Principal no Nubank</div>
+              <p class="inst-bio">Especialista em clusters Kubernetes, automação de CI/CD, segurança Zero Trust e nuvem AWS.</p>
+              <div class="inst-socials">
+                <a href="#" aria-label="GitHub"><i data-lucide="code-2"></i></a>
+                <a href="#" aria-label="LinkedIn"><i data-lucide="globe"></i></a>
+                <a href="#" aria-label="Twitter"><i data-lucide="share-2"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MASTERCLASSES BÔNUS -->
+        <div class="bonus-classes-box glass-panel">
+          <h3 class="bonus-title"><i data-lucide="sparkles"></i> Masterclasses Bônus Inclusas com Especialistas</h3>
+          <div class="bonus-grid">
+            <span class="b-pill"><i data-lucide="cpu"></i> Especialista em Inteligência Artificial</span>
+            <span class="b-pill"><i data-lucide="cloud"></i> Especialista Google Cloud</span>
+            <span class="b-pill"><i data-lucide="server"></i> Arquiteto de Soluções AWS</span>
+            <span class="b-pill"><i data-lucide="atom"></i> Performance Avançada em React & Next.js</span>
+            <span class="b-pill"><i data-lucide="terminal"></i> Microserviços de Alta Escala em Node.js</span>
+            <span class="b-pill"><i data-lucide="layout"></i> UX/UI Design para Desenvolvedores</span>
+            <span class="b-pill"><i data-lucide="briefcase"></i> Carreira, Entrevistas & Negociação Salarial</span>
+            <span class="b-pill"><i data-lucide="globe-2"></i> Conquistando Vagas Remotas Internacionais</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICAÇÃO E RECONHECIMENTO -->
+    <section class="recognition-section">
+      <div class="section-container">
+        <div class="recognition-card glass-panel center">
+          <div class="seal-icon"><i data-lucide="shield-check"></i></div>
+          <h2 class="section-title">Certificados Verificáveis <span class="gradient-text">Reconhecidos pelo Mercado</span></h2>
+          <p class="recognition-text">
+            Nossos certificados atendem a rigorosos padrões de qualidade e podem complementar seu portfólio profissional, perfil do LinkedIn e currículo. Cada credencial inclui hash de verificação digital único e comprovação prática de habilidades dominadas.
+          </p>
+          <div class="certificate-badges">
+            <span class="c-badge"><i data-lucide="check"></i> Hash 100% Verificável</span>
+            <span class="c-badge"><i data-lucide="check"></i> Integrado ao Portfólio do GitHub</span>
+            <span class="c-badge"><i data-lucide="check"></i> Aceito por Empresas Contratantes</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MERCADO DE TRABALHO & SALÁRIOS -->
+    <section class="market-section" id="market">
+      <div class="section-container">
+        <div class="section-header center">
+          <div class="badge cyan-badge"><i data-lucide="trending-up"></i> Mercado Tech & Carreira</div>
+          <h2 class="section-title">Evolução Salarial em <span class="gradient-text-cyan">Engenharia de Software</span></h2>
+          <p class="section-desc">O mercado de tecnologia oferece crescimento salarial acelerado e flexibilidade remota. Explore as médias de mercado por nível.</p>
+        </div>
+
+        <div class="market-chart-box glass-panel">
+          <div class="chart-controls">
+            <button class="level-btn active" data-level="intern">Estagiário</button>
+            <button class="level-btn" data-level="junior">Dev Junior</button>
+            <button class="level-btn" data-level="mid">Dev Pleno</button>
+            <button class="level-btn" data-level="senior">Dev Senior</button>
+            <button class="level-btn" data-level="specialist">Especialista</button>
+            <button class="level-btn" data-level="techlead">Tech Lead</button>
+            <button class="level-btn" data-level="architect">Arquitetura</button>
+            <button class="level-btn" data-level="manager">Gerência de Engenharia</button>
+          </div>
+
+          <div class="salary-display">
+            <div class="salary-title" id="selectedRoleTitle">Desenvolvedor Junior</div>
+            <div class="salary-amount gradient-text-cyan" id="selectedSalaryValue">R$ 5.500 - R$ 8.200 / mês</div>
+            <p id="roleDescription">Desenvolvedores em início de carreira que constroem componentes, escrevem testes unitários e colaboram em squads ágeis.</p>
+          </div>
+
+          <div class="bar-chart-visual" id="salaryBarChart">
+            <!-- Renderizado dinamicamente por salary-chart.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GARANTIA E RESUMO -->
+    <section class="guarantee-section">
+      <div class="section-container">
+        <div class="guarantee-wrapper glass-panel">
+          <div class="shield-badge"><i data-lucide="shield-check"></i></div>
+          <h2 class="section-title">Garantia Incondicional de 30 Dias <span class="gradient-text">100% Sem Risco</span></h2>
+          <p class="guarantee-subtitle">Experimente a DevCod por 30 dias completos. Assista às aulas, participe das mentorias e construa código real. Se achar que não é a melhor plataforma de educação tech que você já usou, devolvemos 100% do seu investimento imediatamente.</p>
+
+          <div class="included-grid">
+            <div class="inc-item"><i data-lucide="check-circle-2"></i> Acesso Total a Todos os 40+ Cursos</div>
+            <div class="inc-item"><i data-lucide="check-circle-2"></i> Comunidade Ativa no Discord e Telegram</div>
+            <div class="inc-item"><i data-lucide="check-circle-2"></i> Mentoria Diária ao Vivo e Q&A</div>
+            <div class="inc-item"><i data-lucide="check-circle-2"></i> Projetos de Portfólio do Mundo Real</div>
+            <div class="inc-item"><i data-lucide="check-circle-2"></i> Atualizações Contínuas de Cursos e IA</div>
+            <div class="inc-item"><i data-lucide="check-circle-2"></i> Suporte Individual de Código</div>
+            <div class="inc-item"><i data-lucide="check-circle-2"></i> Certificados de Conclusão Verificáveis</div>
+            <div class="inc-item"><i data-lucide="check-circle-2"></i> Acesso ao Módulo Club Agents IA</div>
+          </div>
+
+          <div class="guarantee-cta">
+            <button class="btn btn-primary btn-xl" onclick="document.getElementById('openEnrollModal').click()">
+              Garantir Minha Vaga Agora <i data-lucide="arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ (PERGUNTAS FREQUENTES) -->
+    <section class="faq-section" id="faq">
+      <div class="section-container">
+        <div class="section-header center">
+          <div class="badge"><i data-lucide="help-circle"></i> Perguntas Frequentes</div>
+          <h2 class="section-title">Dúvidas Frequentes? <span class="gradient-text">Nós Temos as Respostas.</span></h2>
+        </div>
+
+        <div class="faq-accordion">
+          <div class="faq-item glass-panel">
+            <button class="faq-question">
+              <span>Preciso ter conhecimento prévio em programação para começar?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Não! A DevCod é estruturada com trilhas de aprendizado que levam você desde o zero absoluto até o nível de engenharia de software avançado e profissional.</p>
+            </div>
+          </div>
+
+          <div class="faq-item glass-panel">
+            <button class="faq-question">
+              <span>Quanto tempo leva para concluir a formação?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Alunos que dedicam de 1 a 2 horas por dia geralmente constroem seus primeiros projetos de portfólio em 60 dias e ficam prontos para o mercado de trabalho entre 4 a 6 meses.</p>
+            </div>
+          </div>
+
+          <div class="faq-item glass-panel">
+            <button class="faq-question">
+              <span>Como funcionam as mentorias ao vivo e as revisões de código?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Você pode entrar diariamente em salas de vídeo ao vivo para resolver bloqueios com instrutores, enviar Pull Requests no GitHub para revisão individual e tirar dúvidas 24/7 na plataforma.</p>
+            </div>
+          </div>
+
+          <div class="faq-item glass-panel">
+            <button class="faq-question">
+              <span>Os certificados são reconhecidos pelas empresas de tecnologia?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Sim! Nossos certificados possuem hash de verificação digital único e conectam-se aos seus repositórios no GitHub, comprovando na prática sua capacidade técnica para os recrutadores.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="section-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon"><i data-lucide="code-2"></i></div>
+            <span class="logo-text">DEV<span class="highlight">COD</span></span>
+          </a>
+          <p>A plataforma de educação em tecnologia premium que capacita desenvolvedores a criar o futuro do software.</p>
+        </div>
+
+        <div class="footer-links-group">
+          <div class="f-col">
+            <h4>Programas</h4>
+            <a href="#programs">Web Full-Stack</a>
+            <a href="#programs">Arquitetura Backend</a>
+            <a href="#programs">Cloud & DevOps</a>
+            <a href="#club-agents">IA & Club Agents</a>
+          </div>
+          <div class="f-col">
+            <h4>Plataforma</h4>
+            <a href="#platform">Área do Aluno</a>
+            <a href="#playground">Playground de Código</a>
+            <a href="#wall-of-fame">Mural de Sucesso</a>
+            <a href="#market">Guia Salarial</a>
+          </div>
+          <div class="f-col">
+            <h4>Empresa</h4>
+            <a href="#instructors">Instrutores</a>
+            <a href="#companies">Empresas Parceiras</a>
+            <a href="#faq">Suporte & FAQ</a>
+            <a href="#">Política de Privacidade</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 DevCod Tecnologias Inc. Todos os direitos reservados. Layout e design originais.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="GitHub"><i data-lucide="code-2"></i></a>
+          <a href="#" aria-label="LinkedIn"><i data-lucide="globe"></i></a>
+          <a href="#" aria-label="YouTube"><i data-lucide="share-2"></i></a>
+          <a href="#" aria-label="Instagram"><i data-lucide="external-link"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL CONTAINER -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal-content glass-panel" id="modalWindow">
+      <button class="modal-close" id="modalClose"><i data-lucide="x"></i></button>
+      <div id="modalBody">
+        <!-- Injetado via modal.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Inicializa ícones do Lucide
+    lucide.createIcons();
+  </script>
+</body>
+</html>
