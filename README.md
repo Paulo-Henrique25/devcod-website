@@ -75,3 +75,9 @@ Certifique-se de ter o [Node.js](https://nodejs.org) (versão 18 ou superior) in
 
 ---
 
+## 📄 Guia Explicativo em PDF
+O projeto possui um gerador de documentação interno em Node.js. Para gerar novamente o guia PDF explicativo, execute:
+```bash
+node generate_pdf.js
+```
+O PDF será exportado automaticamente para a raiz do seu projeto, para a Área de Trabalho e para a sua pasta de Downloads.
